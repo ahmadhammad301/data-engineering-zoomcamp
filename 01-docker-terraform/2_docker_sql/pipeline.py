@@ -1,11 +1,13 @@
 import sys
-
 import pandas as pd
+import time
 
 print(sys.argv)
 
-day = sys.argv[1]
+if len(sys.argv)>1:
+    day = sys.argv[1]
+else:  
+    day = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime(time.time()))
 
-# some fancy stuff with pandas
 
-print(f'job finished successfully for day = {day}')
+print(f"the job finished successfully for day {day}")
